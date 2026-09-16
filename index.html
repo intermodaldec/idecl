@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IDEC | Intermodal Decoration Engineering Company Limited</title>
+<title>IDECL | 聯運裝修工程有限公司 Intermodal Decoration Engineering Company Limited</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2332'/><text x='50' y='68' font-size='52' font-weight='900' fill='%23d4a24e' text-anchor='middle' font-family='Arial'>I</text></svg>">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap">
@@ -37,6 +37,7 @@ a{text-decoration:none;color:inherit}
   height:72px;max-width:1200px;margin:0 auto;padding:0 24px;
 }
 .logo{display:flex;align-items:center;gap:12px}
+.logo img{height:38px;width:auto;display:block}
 .logo-mark{
   width:42px;height:42px;background:var(--gold);border-radius:8px;
   display:flex;align-items:center;justify-content:center;
@@ -44,7 +45,7 @@ a{text-decoration:none;color:inherit}
 }
 .logo-text{color:var(--white);font-weight:700;font-size:15px;letter-spacing:.5px;line-height:1.3}
 .logo-text span{display:block;font-size:11px;color:var(--gold);font-weight:400;letter-spacing:1px}
-.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{
   color:var(--grey-light);font-size:14px;font-weight:500;
   transition:color .2s;position:relative;padding:4px 0;
@@ -73,7 +74,7 @@ a{text-decoration:none;color:inherit}
   background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);
   background-size:60px 60px;
 }
-.hero-content{position:relative;z-index:2;max-width:720px}
+.hero-content{position:relative;z-index:2;max-width:760px}
 .hero-tag{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(212,162,78,0.12);border:1px solid rgba(212,162,78,0.3);
@@ -90,7 +91,7 @@ a{text-decoration:none;color:inherit}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p{
   font-size:clamp(15px,1.8vw,18px);color:var(--grey-light);
-  margin-bottom:40px;max-width:560px;line-height:1.8;
+  margin-bottom:40px;max-width:600px;line-height:1.8;
 }
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
 .btn{
@@ -120,7 +121,7 @@ a{text-decoration:none;color:inherit}
   font-family:"Noto Serif TC",serif;font-size:clamp(28px,3.5vw,42px);
   font-weight:900;color:var(--navy);margin-bottom:16px;
 }
-.section-desc{color:var(--grey);font-size:16px;max-width:600px;margin:0 auto}
+.section-desc{color:var(--grey);font-size:16px;max-width:640px;margin:0 auto}
 
 /* ===== About ===== */
 .about{background:var(--white)}
@@ -141,17 +142,65 @@ a{text-decoration:none;color:inherit}
   color:var(--navy);margin-bottom:20px;line-height:1.4;
 }
 .about-content p{color:var(--grey);margin-bottom:16px;font-size:15px}
-.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-.about-feature{display:flex;gap:12px;align-items:flex-start}
-.about-feature-icon{
-  width:36px;height:36px;min-width:36px;background:rgba(212,162,78,0.12);
-  border-radius:8px;display:flex;align-items:center;justify-content:center;
+.about-founder{
+  margin-top:20px;padding:16px 20px;background:rgba(212,162,78,0.06);
+  border-left:3px solid var(--gold);border-radius:0 8px 8px 0;
 }
-.about-feature-icon svg{width:18px;height:18px;stroke:var(--gold)}
-.about-feature-text{font-size:14px;font-weight:500;color:var(--navy)}
+.about-founder p{margin:0;font-size:14px;color:var(--navy-light)}
+.about-founder strong{color:var(--gold-dark)}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.about-value{
+  padding:16px;border-radius:10px;background:var(--bg);
+  border:1px solid rgba(0,0,0,0.04);
+}
+.about-value h5{font-size:14px;font-weight:700;color:var(--gold-dark);margin-bottom:6px}
+.about-value p{font-size:13px;color:var(--grey);margin:0;line-height:1.6}
+
+/* ===== Stats Band ===== */
+.stats-band{
+  background:linear-gradient(135deg,var(--navy-dark),var(--navy));
+  padding:60px 0;position:relative;overflow:hidden;
+}
+.stats-band::before{
+  content:'';position:absolute;inset:0;opacity:0.03;
+  background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.stats-band-inner{
+  position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);
+  gap:32px;text-align:center;
+}
+.stats-band-item .num{
+  font-family:"Noto Serif TC",serif;font-size:42px;font-weight:900;color:var(--gold);
+  line-height:1.1;
+}
+.stats-band-item .label{font-size:13px;color:var(--grey-light);margin-top:8px;letter-spacing:.5px}
+
+/* ===== Advantages ===== */
+.advantages{background:var(--bg)}
+.advantages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.advantage-card{
+  background:var(--card);border-radius:12px;padding:36px 28px;
+  border:1px solid rgba(0,0,0,0.04);transition:all .35s;
+  position:relative;overflow:hidden;
+}
+.advantage-card::before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s;
+}
+.advantage-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(26,35,50,0.1)}
+.advantage-card:hover::before{transform:scaleX(1)}
+.advantage-icon{
+  width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.advantage-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.advantage-card h4{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.advantage-card p{font-size:14px;color:var(--grey);line-height:1.7}
 
 /* ===== Services ===== */
-.services{background:var(--bg)}
+.services{background:var(--white)}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .service-card{
   background:var(--card);border-radius:12px;padding:36px 28px;
@@ -173,34 +222,46 @@ a{text-decoration:none;color:inherit}
 .service-card h4{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .service-card p{font-size:14px;color:var(--grey);line-height:1.7}
 
-/* ===== Team ===== */
-.team{background:var(--white)}
-.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.team-card{
-  background:var(--card);border-radius:12px;overflow:hidden;
-  border:1px solid rgba(0,0,0,0.04);transition:all .35s;
+/* ===== Factory ===== */
+.factory{background:var(--bg)}
+.factory-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.factory-content h3{
+  font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;
+  color:var(--navy);margin-bottom:20px;line-height:1.4;
 }
-.team-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(26,35,50,0.1)}
-.team-avatar{
-  height:140px;background:linear-gradient(135deg,var(--navy),var(--navy-light));
+.factory-content p{color:var(--grey);margin-bottom:16px;font-size:15px}
+.factory-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.factory-stat{
+  padding:20px;border-radius:10px;background:var(--card);
+  border:1px solid rgba(0,0,0,0.04);text-align:center;
+}
+.factory-stat .num{font-family:"Noto Serif TC",serif;font-size:28px;font-weight:900;color:var(--gold)}
+.factory-stat .label{font-size:12px;color:var(--grey);margin-top:4px}
+.factory-visual{
+  border-radius:12px;overflow:hidden;aspect-ratio:4/3;
+  background:linear-gradient(135deg,var(--navy),var(--navy-light));
   display:flex;align-items:center;justify-content:center;position:relative;
 }
-.team-avatar-initials{
-  font-family:"Noto Serif TC",serif;font-size:36px;font-weight:900;color:var(--gold);
+.factory-visual svg{width:50%;height:50%;opacity:0.15}
+.factory-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.factory-tag{
+  font-size:12px;font-weight:600;color:var(--gold-dark);
+  background:rgba(212,162,78,0.1);padding:6px 14px;border-radius:100px;
 }
-.team-body{padding:20px 16px;text-align:center}
-.team-name{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:2px}
-.team-name-en{font-size:12px;color:var(--grey);margin-bottom:8px}
-.team-role{
-  display:inline-block;font-size:12px;font-weight:600;color:var(--gold-dark);
-  background:rgba(212,162,78,0.1);padding:4px 12px;border-radius:100px;margin-bottom:12px;
-}
-.team-contact{font-size:12px;color:var(--grey);line-height:1.8}
-.team-contact a{color:var(--navy-light);transition:color .2s}
-.team-contact a:hover{color:var(--gold-dark)}
 
 /* ===== Projects ===== */
 .projects{background:var(--bg)}
+.projects-filter{
+  display:flex;justify-content:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;
+}
+.project-filter-btn{
+  padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600;
+  border:1.5px solid var(--grey-light);background:transparent;color:var(--grey);
+  cursor:pointer;transition:all .25s;
+}
+.project-filter-btn.active,.project-filter-btn:hover{
+  border-color:var(--gold);background:var(--gold);color:var(--navy);
+}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .project-card{
   border-radius:12px;overflow:hidden;background:var(--card);
@@ -211,10 +272,18 @@ a{text-decoration:none;color:inherit}
   height:220px;position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
-.project-img.p1{background:linear-gradient(135deg,#2c3e50,#34495e)}
-.project-img.p2{background:linear-gradient(135deg,#1a3a4a,#2d5a6a)}
-.project-img.p3{background:linear-gradient(135deg,#3a2c1a,#5a4020)}
-.project-img svg{width:40%;height:40%;opacity:0.2;stroke:var(--gold)}
+.project-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .45s ease;
+}
+.project-card:hover .project-img img{transform:scale(1.06)}
+.project-img.hotel{background:linear-gradient(135deg,#1a2a4a,#2c4a6a)}
+.project-img.mall{background:linear-gradient(135deg,#2a1a3a,#4a2c5a)}
+.project-img.residential{background:linear-gradient(135deg,#1a3a2a,#2c5a4a)}
+.project-img.clubhouse{background:linear-gradient(135deg,#3a2c1a,#5a4020)}
+.project-img.commercial{background:linear-gradient(135deg,#2c3e50,#34495e)}
+.project-img.showflat{background:linear-gradient(135deg,#3a1a2a,#5a2c4a)}
+.project-img svg{width:35%;height:35%;opacity:0.2;stroke:var(--gold)}
 .project-category{
   position:absolute;top:16px;left:16px;
   background:rgba(26,35,50,0.85);color:var(--gold);
@@ -222,9 +291,31 @@ a{text-decoration:none;color:inherit}
 }
 .project-body{padding:24px}
 .project-body h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
-.project-body p{font-size:14px;color:var(--grey);margin-bottom:12px}
-.project-meta{display:flex;gap:16px;font-size:12px;color:var(--grey)}
-.project-meta span{display:flex;align-items:center;gap:4px}
+.project-body p{font-size:14px;color:var(--grey);margin-bottom:12px;line-height:1.6}
+
+/* ===== Quality & Safety ===== */
+.quality{background:var(--white)}
+.quality-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.quality-card{
+  background:var(--card);border-radius:12px;padding:36px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+.quality-card h4{
+  font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;
+  color:var(--navy);margin-bottom:20px;display:flex;align-items:center;gap:12px;
+}
+.quality-card h4 svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.quality-list{list-style:none}
+.quality-list li{
+  padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.05);
+  font-size:14px;color:var(--grey);display:flex;gap:12px;align-items:flex-start;
+}
+.quality-list li:last-child{border-bottom:none}
+.quality-list li::before{
+  content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;
+  margin-top:8px;flex-shrink:0;
+}
+.quality-list strong{color:var(--navy);font-weight:600}
 
 /* ===== CTA ===== */
 .cta{
@@ -301,8 +392,9 @@ a{text-decoration:none;color:inherit}
 /* ===== Responsive ===== */
 @media(max-width:1024px){
   .services-grid{grid-template-columns:repeat(2,1fr)}
-  .team-grid{grid-template-columns:repeat(3,1fr)}
+  .advantages-grid{grid-template-columns:repeat(2,1fr)}
   .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-band-inner{grid-template-columns:repeat(2,1fr);gap:24px}
 }
 @media(max-width:768px){
   .nav-links{
@@ -313,12 +405,14 @@ a{text-decoration:none;color:inherit}
   .nav-links.open{display:flex}
   .nav-links li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
   .nav-toggle{display:block}
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
-  .services-grid,.team-grid,.projects-grid{grid-template-columns:1fr}
+  .about-grid,.contact-grid,.factory-grid,.quality-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid,.advantages-grid,.projects-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .form-row{grid-template-columns:1fr}
   .hero-stats{gap:32px}
   .section{padding:64px 0}
+  .about-values{grid-template-columns:1fr}
+  .factory-stats{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -328,14 +422,15 @@ a{text-decoration:none;color:inherit}
 <nav class="nav">
   <div class="nav-inner">
     <a href="#top" class="logo">
-      <div class="logo-mark">I</div>
-      <div class="logo-text">IDEC<span>INTERMODAL DECORATION</span></div>
+      <img src="images/logo-white.png" alt="IDECL 聯運裝修工程有限公司">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">公司簡介</a></li>
+      <li><a href="#advantages">核心優勢</a></li>
       <li><a href="#services">服務項目</a></li>
-      <li><a href="#team">專業團隊</a></li>
+      <li><a href="#factory">工廠實力</a></li>
       <li><a href="#projects">工程案例</a></li>
+      <li><a href="#quality">品質安全</a></li>
       <li><a href="#contact">聯絡我們</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="menu">
@@ -349,19 +444,43 @@ a{text-decoration:none;color:inherit}
   <div class="hero-grid"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-tag">香港專業裝修工程公司</div>
-      <h1>匠心打造<br><em>優質空間</em>與工程</h1>
-      <p>Intermodal Decoration Engineering Company Limited 專注室內裝修、樓宇維修及各類工程服務，以專業團隊與嚴謹品質管理，為客戶提供一站式工程解決方案。</p>
+      <div class="hero-tag">香港領先承建商 · 紮根香港 敢拼敢創</div>
+      <h1>匠心打造<br><em>六星級</em>工程與空間</h1>
+      <p>聯運裝修工程有限公司（Intermodal Decoration Engineering Company Limited）是香港領先的承建商，擁有 10+ 年專業經驗，成功交付 200+ 優質工程項目，為六星級酒店、會所、豪宅及名牌商舖提供卓越裝修工程服務。</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary">免費報價諮詢
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#services" class="btn btn-outline">查看服務</a>
+        <a href="#projects" class="btn btn-outline">查看工程案例</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num">5+</div><div class="stat-label">專業項目經理</div></div>
-        <div><div class="stat-num">100+</div><div class="stat-label">完成工程項目</div></div>
-        <div><div class="stat-num">100%</div><div class="stat-label">客戶滿意度</div></div>
+        <div><div class="stat-num">10+</div><div class="stat-label">年專業經驗</div></div>
+        <div><div class="stat-num">200+</div><div class="stat-label">完成工程項目</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">驗收合格率</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats Band ===== -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-band-inner">
+      <div class="stats-band-item">
+        <div class="num">80+</div>
+        <div class="label">公司團隊規模</div>
+      </div>
+      <div class="stats-band-item">
+        <div class="num">60+</div>
+        <div class="label">香港直屬員工</div>
+      </div>
+      <div class="stats-band-item">
+        <div class="num">20+</div>
+        <div class="label">項目管理人員</div>
+      </div>
+      <div class="stats-band-item">
+        <div class="num">100+</div>
+        <div class="label">內地廠房熟手技工</div>
       </div>
     </div>
   </div>
@@ -372,8 +491,8 @@ a{text-decoration:none;color:inherit}
   <div class="container">
     <div class="section-header">
       <div class="section-tag">ABOUT US</div>
-      <h2 class="section-title">關於 IDEC</h2>
-      <p class="section-desc">以專業、可靠、創新為核心價值，締造卓越工程品質</p>
+      <h2 class="section-title">關於 IDECL</h2>
+      <p class="section-desc">紮根香港，接軌國際——工程界的獅子山精神</p>
     </div>
     <div class="about-grid">
       <div class="about-img">
@@ -383,27 +502,65 @@ a{text-decoration:none;color:inherit}
         <div class="about-img-badge">香港黃大仙 · 新蒲崗</div>
       </div>
       <div class="about-content">
-        <h3>專業裝修工程<br>一站式解決方案</h3>
-        <p>Intermodal Decoration Engineering Company Limited（IDEC）總部位於香港黃大仙區新蒲崗，是一支經驗豐富的專業工程團隊。我們致力為住宅、商業及工業客戶提供高品質的裝修及工程服務。</p>
-        <p>由資深項目經理帶領，從初期設計諮詢、施工管理到竣工驗收，全程緊密跟進，確保每個項目都能按時、按預算、按品質完成。</p>
-        <div class="about-features">
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div class="about-feature-text">品質保證</div>
+        <h3>香港領先承建商<br>一站式工程解決方案</h3>
+        <p>聯運裝修工程有限公司（Intermodal Decoration Engineering Company Limited）是香港一家領先的承建商，總部位於香港。集團在香港和中國各地均擁有專業施工團隊，具備多項裝修工程經驗。</p>
+        <p>我們專注提供大型專業裝修、櫥櫃、維修和保養，以及各類工程項目管理服務。以高效率、高品質和具有成本效益的方式進行專案施工管理，能夠為六星級款待業酒店、會所、豪宅和名牌商舖提供卓越服務。</p>
+        <div class="about-founder">
+          <p><strong>創辦人：</strong>林迎發先生 — 以企業價值為核心，帶領團隊成為業內專業的首選。</p>
+        </div>
+        <div class="about-values">
+          <div class="about-value">
+            <h5>價值 VALUE</h5>
+            <p>為客人創造更高價值，堅守誠信，信守承諾，贏取客戶信任。</p>
           </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div class="about-feature-text">按時完工</div>
-          </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
-            <div class="about-feature-text">透明報價</div>
-          </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
-            <div class="about-feature-text">售後跟進</div>
+          <div class="about-value">
+            <h5>使命 MISSION</h5>
+            <p>綜合力量，匯聚智慧，發揮團隊精神；發揮創意，開拓創新，提升服務水平。</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Advantages ===== -->
+<section class="section advantages" id="advantages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">OUR ADVANTAGES</div>
+      <h2 class="section-title">核心優勢</h2>
+      <p class="section-desc">以創新技術與系統化管理，持續提升工程品質與客戶體驗</p>
+    </div>
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>數據閉環自學習</h4>
+        <p>實時數據自動優化系統，現場數據持續饋入，自動提升工程管理效率與決策品質。</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4>模組化設計</h4>
+        <p>Plug &amp; Play 模組化架構，可在數週內快速適應不同產業客戶的獨特需求。</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+        <h4>知識累積</h4>
+        <p>每次操作記錄自動轉化為企業知識庫，持續累積專業經驗，為客戶提供更卓越服務。</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16M4 7h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4V7z"/></svg></div>
+        <h4>一站式服務生態圈</h4>
+        <p>涵蓋室內設計、裝修管理、維修保養、傢具工廠、物料供應及物聯網傢具，全鏈條整合。</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+        <h4>裝配式裝修 DFMA</h4>
+        <p>引進「先裝後嵌」裝配式裝修技術，複雜工序轉移至廠房預製，減省現場施工，提升質素與安全。</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h4>品質與安全保障</h4>
+        <p>獨立 QA/QC 團隊直屬管理層，嚴格遵循屋宇署、地政總署及消防處規範，時刻將安全健康環保置於首位。</p>
       </div>
     </div>
   </div>
@@ -415,111 +572,85 @@ a{text-decoration:none;color:inherit}
     <div class="section-header">
       <div class="section-tag">OUR SERVICES</div>
       <h2 class="section-title">服務項目</h2>
-      <p class="section-desc">涵蓋裝修、維修、設計等全方位工程服務</p>
+      <p class="section-desc">涵蓋酒店、商場、住宅、商業大廈、會所、餐飲、示範單位、廚櫃及改建加建等全方位工程</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V10"/></svg></div>
-        <h4>室內裝修工程</h4>
-        <p>住宅、商舖、寫字樓全面裝修，由設計到施工一條龍服務，打造理想空間。</p>
+        <h4>室內設計及裝修工程</h4>
+        <p>專業 CAD 施工圖、BIM 及 3D 渲染團隊，為住宅、商舖、寫字樓及酒店提供由設計到施工的一條龍服務。</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-        <h4>樓宇維修工程</h4>
-        <p>外牆維修、內部翻新、結構修復，專業團隊處理各類樓宇保養及維修問題。</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
-        <h4>防水及滲水維修</h4>
-        <p>專業防水工程、滲水檢測及修復，針對天台、外牆、廁所等常見滲水問題。</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <h4>電力及燈光工程</h4>
-        <p>燈光設計、電力配置、弱線系統安裝，確保用電安全與照明效果兼備。</p>
+        <h4>維修與保養</h4>
+        <p>樓宇外牆維修、內部翻新、結構修復及定期保養服務，專業團隊處理各類樓宇保養及維修問題。</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11M4 21h16M9 21v-6h6v6"/></svg></div>
-        <h4>泥水及地台工程</h4>
-        <p>鋪磚、地台找平、間隔牆身、批盪等泥水工程，工藝細緻耐用。</p>
+        <h4>廚櫃及傢具製造</h4>
+        <p>自設 550,000 平方呎廠房，專業生產木器、人造石、鐵器、大理石等高品質廚櫃及定制傢具。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+        <h4>改建及加建工程 (A&amp;A)</h4>
+        <p>商業大廈改建加建、結構改造及空間優化，熟悉屋宇署及消防處審批要求，確保合法合規。</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
-        <h4>設計及項目管理</h4>
-        <p>空間設計規劃、工程進度管理、品質監控，確保項目順利推進及交付。</p>
+        <h4>項目管理</h4>
+        <p>關鍵路徑管理、區域交錯策略、工作順序流程，由資深項目經理全程緊密跟進，確保按時按質交付。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h4>除甲醛及售後服務</h4>
+        <p>工程完成後提供專業除甲醛服務，守護客戶健康；完善的售後跟進與保修機制，確保長期品質。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Team ===== -->
-<section class="section team" id="team">
+<!-- ===== Factory ===== -->
+<section class="section factory" id="factory">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">OUR TEAM</div>
-      <h2 class="section-title">專業團隊</h2>
-      <p class="section-desc">資深項目經理團隊，為每個工程項目提供專業支援</p>
+      <div class="section-tag">FACTORY</div>
+      <h2 class="section-title">工廠實力</h2>
+      <p class="section-desc">20+ 年專業製造經驗，一站式供應鏈管理，從原材料到安裝全程嚴控品質</p>
     </div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar"><div class="team-avatar-initials">KL</div></div>
-        <div class="team-body">
-          <div class="team-name">林建根</div>
-          <div class="team-name-en">Ken Lam</div>
-          <div class="team-role">高級項目經理</div>
-          <div class="team-contact">
-            <a href="tel:+85263590123">6359 0123</a><br>
-            <a href="mailto:kenlam@idecl.hk">kenlam@idecl.hk</a>
+    <div class="factory-grid">
+      <div class="factory-content">
+        <h3>自設廠房 · 一站管理</h3>
+        <p>與固定廠房深度協作，提供完善的供應鏈與一站式服務。從原材料採購、生產製造到產品配送，都嚴控施工時間及產品質量，打造高效無縫的客戶體驗。</p>
+        <p>廠房引進「裝配式裝修」技術，通過「先裝後嵌」手法，將複雜裝修工序轉移至較易控制的廠房進行預製，再送達工地裝嵌，有效減少天氣、勞動力及場地限制。</p>
+        <p>廠內設有 1:1 比例模擬裝配陳列室，讓客戶近距離預視裝修成品，親身感受每個細節，並可按需求提出個性化定制。</p>
+        <div class="factory-stats">
+          <div class="factory-stat">
+            <div class="num">20+</div>
+            <div class="label">年廠房專業經驗</div>
           </div>
+          <div class="factory-stat">
+            <div class="num">550K</div>
+            <div class="label">平方呎廠房面積</div>
+          </div>
+        </div>
+        <div class="factory-tags">
+          <span class="factory-tag">東莞</span>
+          <span class="factory-tag">企石</span>
+          <span class="factory-tag">惠州</span>
+          <span class="factory-tag">木器</span>
+          <span class="factory-tag">人造石</span>
+          <span class="factory-tag">鐵器</span>
+          <span class="factory-tag">大理石</span>
+          <span class="factory-tag">油漆</span>
+          <span class="factory-tag">繪圖</span>
+          <span class="factory-tag">包裝運輸</span>
         </div>
       </div>
-      <div class="team-card">
-        <div class="team-avatar"><div class="team-avatar-initials">RW</div></div>
-        <div class="team-body">
-          <div class="team-name">黃威文</div>
-          <div class="team-name-en">Raymond Wong</div>
-          <div class="team-role">項目經理</div>
-          <div class="team-contact">
-            <a href="tel:+85260892580">6089 2580</a><br>
-            <a href="mailto:Raymondwong@idecl.hk">Raymondwong@idecl.hk</a>
-          </div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><div class="team-avatar-initials">AP</div></div>
-        <div class="team-body">
-          <div class="team-name">彭海濤</div>
-          <div class="team-name-en">Arthur Pang</div>
-          <div class="team-role">合約經理</div>
-          <div class="team-contact">
-            <a href="tel:+85268403722">6840 3722</a><br>
-            <a href="mailto:arthurpang@idecl.hk">arthurpang@idecl.hk</a>
-          </div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><div class="team-avatar-initials">AY</div></div>
-        <div class="team-body">
-          <div class="team-name">余奕豪</div>
-          <div class="team-name-en">Andrew Yu</div>
-          <div class="team-role">高級項目經理</div>
-          <div class="team-contact">
-            <a href="tel:+85297257208">9725 7208</a><br>
-            <a href="mailto:andrewyu@idecl.hk">andrewyu@idecl.hk</a>
-          </div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><div class="team-avatar-initials">RL</div></div>
-        <div class="team-body">
-          <div class="team-name">羅俊傑</div>
-          <div class="team-name-en">Roger Law</div>
-          <div class="team-role">助理項目經理</div>
-          <div class="team-contact">
-            <a href="tel:+85265746846">6574 6846</a><br>
-            <a href="mailto:rogerlaw@idecl.hk">rogerlaw@idecl.hk</a>
-          </div>
-        </div>
+      <div class="factory-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="0.8">
+          <path d="M2 20h20M4 20V8l5-3v15M9 20V5l6-3v18M15 20V8l4-2v14"/>
+          <path d="M6 12h2M6 15h2M11 10h2M11 13h2M11 16h2M17 11h2M17 14h2"/>
+        </svg>
       </div>
     </div>
   </div>
@@ -531,50 +662,137 @@ a{text-decoration:none;color:inherit}
     <div class="section-header">
       <div class="section-tag">OUR PROJECTS</div>
       <h2 class="section-title">工程案例</h2>
-      <p class="section-desc">精選完成項目，展示我們的工程實力與品質</p>
+      <p class="section-desc">200+ 優質工程項目，涵蓋酒店、商場、住宅、會所、商業大廈等多個領域</p>
     </div>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-img p1">
-          <div class="project-category">住宅裝修</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V10"/></svg>
+        <div class="project-img">
+          <div class="project-category">款待 / 酒店</div>
+          <img src="images/regent-hotel.jpg" alt="香港麗晶酒店 Regent Hotel Hong Kong">
         </div>
         <div class="project-body">
-          <h4>九龍塘住宅單位翻新</h4>
-          <p>全面室內翻新工程，包括客廳、房間、廚房及廁所重新設計與裝修。</p>
-          <div class="project-meta">
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> 2025</span>
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> 九龍塘</span>
-          </div>
+          <h4>香港麗晶酒店</h4>
+          <p>Regent Hotel Hong Kong — 六星級酒店裝修工程，締造頂級款待空間。</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-img p2">
-          <div class="project-category">商舖裝修</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><path d="M3 9l1-5h16l1 5M4 9v11a1 1 0 001 1h14a1 1 0 001-1V9M9 21V13h6v8"/></svg>
+        <div class="project-img">
+          <div class="project-category">款待 / 酒店</div>
+          <img src="images/rosewood-hotel.jpg" alt="香港瑰麗酒店 Rosewood Hong Kong">
         </div>
         <div class="project-body">
-          <h4>旺角商舖裝修工程</h4>
-          <p>零售店舖全面裝修，包含店內設計、燈光配置、收銀區及儲物空間規劃。</p>
-          <div class="project-meta">
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> 2025</span>
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> 旺角</span>
-          </div>
+          <h4>香港瑰麗酒店</h4>
+          <p>Rosewood Hotel Hong Kong — 頂級奢華酒店室內裝修及廚櫃工程。</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-img p3">
-          <div class="project-category">寫字樓裝修</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        <div class="project-img">
+          <div class="project-category">商場</div>
+          <img src="images/k11-musea.jpg" alt="K11 人文購物藝術館 K11 Musea">
         </div>
         <div class="project-body">
-          <h4>觀塘寫字樓裝修</h4>
-          <p>開放式辦公空間設計與裝修，包含會議室、員工區及接待大堂的整體規劃。</p>
-          <div class="project-meta">
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> 2024</span>
-            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> 觀塘</span>
-          </div>
+          <h4>K11 人文購物藝術館</h4>
+          <p>K11 Musea — 高端商場裝修工程，融合藝術與零售的獨特空間。</p>
         </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">商場</div>
+          <img src="images/skycity.jpg" alt="機場航天城 SKYCITY 11 SKIES">
+        </div>
+        <div class="project-body">
+          <h4>機場航天城</h4>
+          <p>SKYCITY（11 SKIES）— 大型商業綜合體裝修工程，展現大型項目管理實力。</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">住宅</div>
+          <img src="images/victoria-harbour.jpg" alt="海璇 Victoria Harbour 住宅項目">
+        </div>
+        <div class="project-body">
+          <h4>海璇 Victoria Harbour</h4>
+          <p>與大型發展商合作的標誌性豪宅項目，提供高品質住宅裝修。</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">住宅</div>
+          <img src="images/mont-verra.jpg" alt="緹外 Mont Verra 山頂豪宅">
+        </div>
+        <div class="project-body">
+          <h4>緹外 Mont Verra</h4>
+          <p>山頂豪宅裝修項目，以精湛工藝打造高端居住空間。</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">會所</div>
+          <img src="images/jockey-club.jpg" alt="香港賽馬會跑馬地會所">
+        </div>
+        <div class="project-body">
+          <h4>香港賽馬會跑馬地會所</h4>
+          <p>Jockey Club Hong Kong Club House — 頂級會所裝修及翻新工程。</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">商業大廈 / A&amp;A</div>
+          <img src="images/new-world-tower.jpg" alt="新世界大廈 New World Tower">
+        </div>
+        <div class="project-body">
+          <h4>新世界大廈</h4>
+          <p>New World Tower — 商業大廈改建及加建工程，合法合規交付。</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <div class="project-category">示範單位</div>
+          <img src="images/the-southside.jpg" alt="港島南岸 The Southside 示範單位">
+        </div>
+        <div class="project-body">
+          <h4>港島南岸 The Southside</h4>
+          <p>精品示範單位裝修工程，精緻細節展現項目的高端定位。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quality & Safety ===== -->
+<section class="section quality" id="quality">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">QUALITY &amp; SAFETY</div>
+      <h2 class="section-title">品質與安全</h2>
+      <p class="section-desc">以人為本，服務為先——嚴格品質管控與安全保障體系</p>
+    </div>
+    <div class="quality-grid">
+      <div class="quality-card">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          品質保障
+        </h4>
+        <ul class="quality-list">
+          <li><strong>獨立 QA/QC 團隊</strong> — 直接直屬公司管理層，確保所有施工及材料符合標準、規格和設計圖。</li>
+          <li><strong>場內外品質檢查</strong> — 對場外預製產品和現場工作均進行嚴格品質保證與控制。</li>
+          <li><strong>合法規範實踐</strong> — 熟悉屋宇署、地政總署及消防處要求，準備防火證書及材料清單。</li>
+          <li><strong>專業施工圖團隊</strong> — CAD、BIM 及 3D 渲染，確保設計精準落地。</li>
+          <li><strong>交接和保修</strong> — 完善的竣工驗收及保修機制，保障長期品質。</li>
+        </ul>
+      </div>
+      <div class="quality-card">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          安全保障
+        </h4>
+        <ul class="quality-list">
+          <li><strong>安全健康環保優先</strong> — 時刻將安全、健康和環保置於首位，致力維護最高標準工作場所。</li>
+          <li><strong>充足資源投入</strong> — 提供充足資源實施安全政策，並在各級推廣及培訓。</li>
+          <li><strong>安全早會制度</strong> — 帶領前線工人進行安全早會，預視施工環境和安全規則。</li>
+          <li><strong>區域交錯管理</strong> — 實施顏色編碼區域出入系統，密閉空間強制執行順序工作流程。</li>
+          <li><strong>除甲醛服務</strong> — 工程完成後提供專業除甲醛服務，傾力守護每位客戶健康。</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -604,7 +822,7 @@ a{text-decoration:none;color:inherit}
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Intermodal Decoration<br>Engineering Company Limited</h3>
-        <p>IDEC 致力為客戶提供專業、可靠的裝修工程服務。無論你有任何工程需求，歡迎與我們聯絡。</p>
+        <p>聯運裝修工程有限公司致力為客戶提供專業、可靠的裝修工程服務。無論你有任何工程需求，歡迎與我們聯絡。</p>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
           <div class="contact-item-text">
@@ -623,7 +841,7 @@ a{text-decoration:none;color:inherit}
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
           <div class="contact-item-text">
             <h5>查詢熱線</h5>
-            <p><a href="tel:+85263590123">6359 0123</a>（Ken Lam）<br><a href="tel:+85260892580">6089 2580</a>（Raymond Wong）</p>
+            <p><a href="tel:+85263590123">6359 0123</a></p>
           </div>
         </div>
       </div>
@@ -645,7 +863,7 @@ a{text-decoration:none;color:inherit}
           </div>
           <div class="form-group">
             <label for="subject">工程類型</label>
-            <input type="text" id="subject" name="subject" placeholder="例如：住宅裝修、樓宇維修...">
+            <input type="text" id="subject" name="subject" placeholder="例如：酒店裝修、住宅裝修、樓宇維修...">
           </div>
           <div class="form-group">
             <label for="message">查詢內容 *</label>
@@ -667,18 +885,19 @@ a{text-decoration:none;color:inherit}
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <div class="logo-mark">I</div>
-          <div class="logo-text">IDEC<span>INTERMODAL DECORATION</span></div>
+          <img src="images/logo-white.png" alt="IDECL 聯運裝修工程有限公司">
         </div>
-        <p>Intermodal Decoration Engineering Company Limited 專業裝修工程公司，為香港客戶提供一站式室內裝修及工程服務。</p>
+        <p>聯運裝修工程有限公司 Intermodal Decoration Engineering Company Limited — 香港領先承建商，為客戶提供一站式室內裝修及工程服務。</p>
       </div>
       <div>
         <h5>快速連結</h5>
         <ul class="footer-links">
           <li><a href="#about">公司簡介</a></li>
+          <li><a href="#advantages">核心優勢</a></li>
           <li><a href="#services">服務項目</a></li>
-          <li><a href="#team">專業團隊</a></li>
+          <li><a href="#factory">工廠實力</a></li>
           <li><a href="#projects">工程案例</a></li>
+          <li><a href="#quality">品質安全</a></li>
           <li><a href="#contact">聯絡我們</a></li>
         </ul>
       </div>
@@ -694,7 +913,7 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="footer-bottom">
       <div>© 2026 Intermodal Decoration Engineering Company Limited. All Rights Reserved.</div>
-      <div>IDECHK · 專業裝修工程</div>
+      <div>IDECLHK · 專業裝修工程</div>
     </div>
   </div>
 </footer>
