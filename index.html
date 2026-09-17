@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap">
 <style>
-/* ===== Reset & Base ===== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --navy:#1a2332;--navy-light:#243044;--navy-dark:#111827;
@@ -17,336 +16,130 @@
   --bg:#f4f5f7;--card:#ffffff;
 }
 html{scroll-behavior:smooth}
-body{
-  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  color:var(--navy);background:var(--white);line-height:1.7;overflow-x:hidden;
-}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--navy);background:var(--white);line-height:1.7;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-
-/* ===== Navigation ===== */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(26,35,50,0.95);backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(212,162,78,0.15);
-  transition:all .3s ease;
-}
-.nav-inner{
-  display:flex;justify-content:space-between;align-items:center;
-  height:72px;max-width:1200px;margin:0 auto;padding:0 24px;
-}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,162,78,0.15);transition:all .3s ease}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:72px;max-width:1200px;margin:0 auto;padding:0 24px}
 .logo{display:flex;align-items:center;gap:12px}
-.logo img{height:38px;width:auto;display:block}
-.logo-mark{
-  width:42px;height:42px;background:var(--gold);border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:"Noto Serif TC",serif;font-weight:900;font-size:22px;color:var(--navy);
-}
-.logo-text{color:var(--white);font-weight:700;font-size:15px;letter-spacing:.5px;line-height:1.3}
-.logo-text span{display:block;font-size:11px;color:var(--gold);font-weight:400;letter-spacing:1px}
+.logo img{height:36px;width:auto;display:block}
 .nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{
-  color:var(--grey-light);font-size:14px;font-weight:500;
-  transition:color .2s;position:relative;padding:4px 0;
-}
-.nav-links a::after{
-  content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
-  background:var(--gold);transition:width .3s;
-}
+.nav-links a{color:var(--grey-light);font-size:14px;font-weight:500;transition:color .2s;position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .3s}
 .nav-links a:hover{color:var(--gold)}
 .nav-links a:hover::after{width:100%}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:.3s}
-
-/* ===== Hero ===== */
-.hero{
-  min-height:100vh;display:flex;align-items:center;
-  background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);
-  position:relative;overflow:hidden;padding-top:72px;
-}
-.hero::before{
-  content:'';position:absolute;top:-50%;right:-20%;width:80%;height:200%;
-  background:radial-gradient(ellipse,rgba(212,162,78,0.08) 0%,transparent 70%);
-}
-.hero-grid{
-  position:absolute;inset:0;opacity:0.04;
-  background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);
-  background-size:60px 60px;
-}
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);position:relative;overflow:hidden;padding-top:72px}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:80%;height:200%;background:radial-gradient(ellipse,rgba(212,162,78,0.08) 0%,transparent 70%)}
+.hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:60px 60px}
 .hero-content{position:relative;z-index:2;max-width:760px}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(212,162,78,0.12);border:1px solid rgba(212,162,78,0.3);
-  color:var(--gold);padding:8px 18px;border-radius:100px;
-  font-size:13px;font-weight:500;letter-spacing:1px;margin-bottom:28px;
-}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(212,162,78,0.12);border:1px solid rgba(212,162,78,0.3);color:var(--gold);padding:8px 18px;border-radius:100px;font-size:13px;font-weight:500;letter-spacing:1px;margin-bottom:28px}
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{
-  font-family:"Noto Serif TC",serif;font-weight:900;
-  font-size:clamp(36px,5.5vw,64px);color:var(--white);
-  line-height:1.15;margin-bottom:24px;
-}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(36px,5.5vw,64px);color:var(--white);line-height:1.15;margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--gold)}
-.hero p{
-  font-size:clamp(15px,1.8vw,18px);color:var(--grey-light);
-  margin-bottom:40px;max-width:600px;line-height:1.8;
-}
+.hero p{font-size:clamp(15px,1.8vw,18px);color:var(--grey-light);margin-bottom:40px;max-width:600px;line-height:1.8}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 32px;border-radius:6px;font-size:15px;font-weight:600;
-  cursor:pointer;border:none;transition:all .3s;letter-spacing:.5px;
-}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .3s;letter-spacing:.5px}
 .btn-primary{background:var(--gold);color:var(--navy)}
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,162,78,0.3)}
 .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.3)}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-stats{
-  display:flex;gap:48px;margin-top:64px;padding-top:40px;
-  border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;
-}
+.hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap}
 .stat-num{font-family:"Noto Serif TC",serif;font-size:36px;font-weight:900;color:var(--gold)}
 .stat-label{font-size:13px;color:var(--grey);margin-top:4px;letter-spacing:.5px}
-
-/* ===== Section Common ===== */
 .section{padding:100px 0}
 .section-header{text-align:center;margin-bottom:64px}
-.section-tag{
-  display:inline-block;color:var(--gold);font-size:13px;font-weight:600;
-  letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;
-}
-.section-title{
-  font-family:"Noto Serif TC",serif;font-size:clamp(28px,3.5vw,42px);
-  font-weight:900;color:var(--navy);margin-bottom:16px;
-}
+.section-tag{display:inline-block;color:var(--gold);font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-family:"Noto Serif TC",serif;font-size:clamp(28px,3.5vw,42px);font-weight:900;color:var(--navy);margin-bottom:16px}
 .section-desc{color:var(--grey);font-size:16px;max-width:640px;margin:0 auto}
-
-/* ===== About ===== */
+.stats-band{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:60px 0;position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:40px 40px}
+.stats-band-inner{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stats-band-item .num{font-family:"Noto Serif TC",serif;font-size:42px;font-weight:900;color:var(--gold);line-height:1.1}
+.stats-band-item .label{font-size:13px;color:var(--grey-light);margin-top:8px;letter-spacing:.5px}
 .about{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about-img{
-  position:relative;border-radius:12px;overflow:hidden;
-  aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--navy-light));
-  display:flex;align-items:center;justify-content:center;
-}
-.about-img svg{width:60%;height:60%;opacity:0.15}
-.about-img-badge{
-  position:absolute;bottom:24px;left:24px;
-  background:var(--gold);color:var(--navy);padding:16px 24px;border-radius:8px;
-  font-weight:700;font-size:14px;
-}
-.about-content h3{
-  font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;
-  color:var(--navy);margin-bottom:20px;line-height:1.4;
-}
+.about-img{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 12px 32px rgba(26,35,50,0.15)}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about-content h3{font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.4}
 .about-content p{color:var(--grey);margin-bottom:16px;font-size:15px}
-.about-founder{
-  margin-top:20px;padding:16px 20px;background:rgba(212,162,78,0.06);
-  border-left:3px solid var(--gold);border-radius:0 8px 8px 0;
-}
+.about-founder{margin-top:20px;padding:16px 20px;background:rgba(212,162,78,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0}
 .about-founder p{margin:0;font-size:14px;color:var(--navy-light)}
 .about-founder strong{color:var(--gold-dark)}
 .about-values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-.about-value{
-  padding:16px;border-radius:10px;background:var(--bg);
-  border:1px solid rgba(0,0,0,0.04);
-}
+.about-value{padding:16px;border-radius:10px;background:var(--bg);border:1px solid rgba(0,0,0,0.04)}
 .about-value h5{font-size:14px;font-weight:700;color:var(--gold-dark);margin-bottom:6px}
 .about-value p{font-size:13px;color:var(--grey);margin:0;line-height:1.6}
-
-/* ===== Stats Band ===== */
-.stats-band{
-  background:linear-gradient(135deg,var(--navy-dark),var(--navy));
-  padding:60px 0;position:relative;overflow:hidden;
-}
-.stats-band::before{
-  content:'';position:absolute;inset:0;opacity:0.03;
-  background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);
-  background-size:40px 40px;
-}
-.stats-band-inner{
-  position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);
-  gap:32px;text-align:center;
-}
-.stats-band-item .num{
-  font-family:"Noto Serif TC",serif;font-size:42px;font-weight:900;color:var(--gold);
-  line-height:1.1;
-}
-.stats-band-item .label{font-size:13px;color:var(--grey-light);margin-top:8px;letter-spacing:.5px}
-
-/* ===== Advantages ===== */
 .advantages{background:var(--bg)}
 .advantages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.advantage-card{
-  background:var(--card);border-radius:12px;padding:36px 28px;
-  border:1px solid rgba(0,0,0,0.04);transition:all .35s;
-  position:relative;overflow:hidden;
-}
-.advantage-card::before{
-  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s;
-}
+.advantage-card{background:var(--card);border-radius:12px;padding:36px 28px;border:1px solid rgba(0,0,0,0.04);transition:all .35s;position:relative;overflow:hidden}
+.advantage-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .advantage-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(26,35,50,0.1)}
 .advantage-card:hover::before{transform:scaleX(1)}
-.advantage-icon{
-  width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));
-  border-radius:12px;display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
-}
+.advantage-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .advantage-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .advantage-card h4{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .advantage-card p{font-size:14px;color:var(--grey);line-height:1.7}
-
-/* ===== Services ===== */
 .services{background:var(--white)}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{
-  background:var(--card);border-radius:12px;padding:36px 28px;
-  border:1px solid rgba(0,0,0,0.04);transition:all .35s;
-  position:relative;overflow:hidden;
-}
-.service-card::before{
-  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s;
-}
+.service-card{background:var(--card);border-radius:12px;padding:36px 28px;border:1px solid rgba(0,0,0,0.04);transition:all .35s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(26,35,50,0.1)}
 .service-card:hover::before{transform:scaleX(1)}
-.service-icon{
-  width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));
-  border-radius:12px;display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
-}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .service-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .service-card h4{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .service-card p{font-size:14px;color:var(--grey);line-height:1.7}
-
-/* ===== Factory ===== */
 .factory{background:var(--bg)}
-.factory-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.factory-content h3{
-  font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;
-  color:var(--navy);margin-bottom:20px;line-height:1.4;
-}
+.factory-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.factory-content h3{font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.4}
 .factory-content p{color:var(--grey);margin-bottom:16px;font-size:15px}
 .factory-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-.factory-stat{
-  padding:20px;border-radius:10px;background:var(--card);
-  border:1px solid rgba(0,0,0,0.04);text-align:center;
-}
+.factory-stat{padding:20px;border-radius:10px;background:var(--card);border:1px solid rgba(0,0,0,0.04);text-align:center}
 .factory-stat .num{font-family:"Noto Serif TC",serif;font-size:28px;font-weight:900;color:var(--gold)}
 .factory-stat .label{font-size:12px;color:var(--grey);margin-top:4px}
-.factory-visual{
-  border-radius:12px;overflow:hidden;aspect-ratio:4/3;
-  background:linear-gradient(135deg,var(--navy),var(--navy-light));
-  display:flex;align-items:center;justify-content:center;position:relative;
-}
-.factory-visual svg{width:50%;height:50%;opacity:0.15}
 .factory-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.factory-tag{
-  font-size:12px;font-weight:600;color:var(--gold-dark);
-  background:rgba(212,162,78,0.1);padding:6px 14px;border-radius:100px;
-}
-
-/* ===== Projects ===== */
-.projects{background:var(--bg)}
-.projects-filter{
-  display:flex;justify-content:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;
-}
-.project-filter-btn{
-  padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600;
-  border:1.5px solid var(--grey-light);background:transparent;color:var(--grey);
-  cursor:pointer;transition:all .25s;
-}
-.project-filter-btn.active,.project-filter-btn:hover{
-  border-color:var(--gold);background:var(--gold);color:var(--navy);
-}
+.factory-tag{font-size:12px;font-weight:600;color:var(--gold-dark);background:rgba(212,162,78,0.1);padding:6px 14px;border-radius:100px}
+.factory-images{display:flex;flex-direction:column;gap:20px}
+.factory-img{border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(26,35,50,0.1)}
+.factory-img img{width:100%;height:100%;object-fit:cover;display:block}
+.factory-img:first-child{aspect-ratio:16/10}
+.factory-img:last-child{aspect-ratio:16/9}
+.projects{background:var(--white)}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.project-card{
-  border-radius:12px;overflow:hidden;background:var(--card);
-  border:1px solid rgba(0,0,0,0.04);transition:all .35s;
-}
+.project-card{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid rgba(0,0,0,0.04);transition:all .35s}
 .project-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(26,35,50,0.1)}
-.project-img{
-  height:220px;position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.project-img img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .45s ease;
-}
+.project-img{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .project-card:hover .project-img img{transform:scale(1.06)}
-.project-img.hotel{background:linear-gradient(135deg,#1a2a4a,#2c4a6a)}
-.project-img.mall{background:linear-gradient(135deg,#2a1a3a,#4a2c5a)}
-.project-img.residential{background:linear-gradient(135deg,#1a3a2a,#2c5a4a)}
-.project-img.clubhouse{background:linear-gradient(135deg,#3a2c1a,#5a4020)}
-.project-img.commercial{background:linear-gradient(135deg,#2c3e50,#34495e)}
-.project-img.showflat{background:linear-gradient(135deg,#3a1a2a,#5a2c4a)}
-.project-img svg{width:35%;height:35%;opacity:0.2;stroke:var(--gold)}
-.project-category{
-  position:absolute;top:16px;left:16px;
-  background:rgba(26,35,50,0.85);color:var(--gold);
-  padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;
-}
+.project-category{position:absolute;top:16px;left:16px;z-index:2;background:rgba(26,35,50,0.85);color:var(--gold);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600}
 .project-body{padding:24px}
 .project-body h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
-.project-body p{font-size:14px;color:var(--grey);margin-bottom:12px;line-height:1.6}
-
-/* ===== Quality & Safety ===== */
-.quality{background:var(--white)}
+.project-body p{font-size:14px;color:var(--grey);margin-bottom:0;line-height:1.6}
+.quality{background:var(--bg)}
 .quality-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
-.quality-card{
-  background:var(--card);border-radius:12px;padding:36px;
-  border:1px solid rgba(0,0,0,0.04);
-}
-.quality-card h4{
-  font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;
-  color:var(--navy);margin-bottom:20px;display:flex;align-items:center;gap:12px;
-}
+.quality-card{background:var(--card);border-radius:12px;padding:36px;border:1px solid rgba(0,0,0,0.04)}
+.quality-card h4{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:20px;display:flex;align-items:center;gap:12px}
 .quality-card h4 svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .quality-list{list-style:none}
-.quality-list li{
-  padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.05);
-  font-size:14px;color:var(--grey);display:flex;gap:12px;align-items:flex-start;
-}
+.quality-list li{padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.05);font-size:14px;color:var(--grey);display:flex;gap:12px;align-items:flex-start}
 .quality-list li:last-child{border-bottom:none}
-.quality-list li::before{
-  content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;
-  margin-top:8px;flex-shrink:0;
-}
+.quality-list li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:8px;flex-shrink:0}
 .quality-list strong{color:var(--navy);font-weight:600}
-
-/* ===== CTA ===== */
-.cta{
-  background:linear-gradient(135deg,var(--navy-dark),var(--navy));
-  padding:80px 0;position:relative;overflow:hidden;
-}
-.cta::before{
-  content:'';position:absolute;inset:0;opacity:0.03;
-  background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);
-  background-size:40px 40px;
-}
+.cta{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:80px 0;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:40px 40px}
 .cta-inner{position:relative;z-index:2;text-align:center;max-width:700px;margin:0 auto}
-.cta h2{
-  font-family:"Noto Serif TC",serif;font-size:clamp(26px,3.5vw,38px);
-  font-weight:900;color:var(--white);margin-bottom:16px;
-}
+.cta h2{font-family:"Noto Serif TC",serif;font-size:clamp(26px,3.5vw,38px);font-weight:900;color:var(--white);margin-bottom:16px}
 .cta p{color:var(--grey-light);margin-bottom:32px;font-size:16px}
-
-/* ===== Contact ===== */
 .contact{background:var(--white)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.contact-info h3{
-  font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;
-  color:var(--navy);margin-bottom:16px;
-}
+.contact-info h3{font-family:"Noto Serif TC",serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:16px}
 .contact-info>p{color:var(--grey);margin-bottom:32px;font-size:15px}
 .contact-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
-.contact-icon{
-  width:48px;height:48px;min-width:48px;background:rgba(212,162,78,0.1);
-  border-radius:10px;display:flex;align-items:center;justify-content:center;
-}
+.contact-icon{width:48px;height:48px;min-width:48px;background:rgba(212,162,78,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center}
 .contact-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .contact-item-text h5{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .contact-item-text p{font-size:14px;color:var(--grey);line-height:1.6}
@@ -355,17 +148,11 @@ a{text-decoration:none;color:inherit}
 .contact-form{background:var(--bg);border-radius:12px;padding:36px}
 .form-group{margin-bottom:20px}
 .form-group label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:8px}
-.form-group input,.form-group textarea{
-  width:100%;padding:12px 16px;border:1.5px solid #e0e4ea;border-radius:8px;
-  font-size:14px;font-family:inherit;background:var(--white);
-  transition:border-color .2s;outline:none;
-}
+.form-group input,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid #e0e4ea;border-radius:8px;font-size:14px;font-family:inherit;background:var(--white);transition:border-color .2s;outline:none}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
 .form-group textarea{resize:vertical;min-height:100px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-submit{width:100%;justify-content:center}
-
-/* ===== Footer ===== */
 .footer{background:var(--navy-dark);color:var(--grey);padding:60px 0 24px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .footer-brand p{font-size:14px;line-height:1.8;margin-top:16px;max-width:320px}
@@ -374,38 +161,22 @@ a{text-decoration:none;color:inherit}
 .footer-links li{margin-bottom:10px}
 .footer-links a{font-size:14px;color:var(--grey);transition:color .2s}
 .footer-links a:hover{color:var(--gold)}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-  font-size:13px;
-}
-
-/* ===== Toast ===== */
-.toast{
-  position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);
-  background:var(--navy);color:var(--white);padding:14px 28px;border-radius:8px;
-  font-size:14px;z-index:9999;transition:transform .3s;box-shadow:0 8px 24px rgba(0,0,0,0.2);
-  border-left:3px solid var(--gold);
-}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--navy);color:var(--white);padding:14px 28px;border-radius:8px;font-size:14px;z-index:9999;transition:transform .3s;box-shadow:0 8px 24px rgba(0,0,0,0.2);border-left:3px solid var(--gold)}
 .toast.show{transform:translateX(-50%) translateY(0)}
-
-/* ===== Responsive ===== */
 @media(max-width:1024px){
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .advantages-grid{grid-template-columns:repeat(2,1fr)}
   .projects-grid{grid-template-columns:repeat(2,1fr)}
   .stats-band-inner{grid-template-columns:repeat(2,1fr);gap:24px}
+  .factory-grid{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:768px){
-  .nav-links{
-    display:none;position:absolute;top:72px;left:0;right:0;
-    background:var(--navy);flex-direction:column;gap:0;padding:16px 24px;
-    border-bottom:1px solid rgba(212,162,78,0.15);
-  }
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:16px 24px;border-bottom:1px solid rgba(212,162,78,0.15)}
   .nav-links.open{display:flex}
   .nav-links li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
   .nav-toggle{display:block}
-  .about-grid,.contact-grid,.factory-grid,.quality-grid{grid-template-columns:1fr;gap:40px}
+  .about-grid,.contact-grid,.quality-grid{grid-template-columns:1fr;gap:40px}
   .services-grid,.advantages-grid,.projects-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .form-row{grid-template-columns:1fr}
@@ -418,7 +189,6 @@ a{text-decoration:none;color:inherit}
 </head>
 <body>
 
-<!-- ===== Navigation ===== -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="#top" class="logo">
@@ -439,14 +209,13 @@ a{text-decoration:none;color:inherit}
   </div>
 </nav>
 
-<!-- ===== Hero ===== -->
 <section class="hero" id="top">
   <div class="hero-grid"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-tag">香港領先承建商 · 紮根香港 敢拼敢創</div>
-      <h1>匠心打造<br><em>六星級</em>工程與空間</h1>
-      <p>聯運裝修工程有限公司（Intermodal Decoration Engineering Company Limited）是香港領先的承建商，擁有 10+ 年專業經驗，成功交付 200+ 優質工程項目，為六星級酒店、會所、豪宅及名牌商舖提供卓越裝修工程服務。</p>
+      <div class="hero-tag">香港專業裝修工程公司 · 紮根香港 敢拼敢創</div>
+      <h1>匠心打造<br><em>優質空間</em>與工程</h1>
+      <p>聯運裝修工程有限公司（Intermodal Decoration Engineering Company Limited）是香港領先的承建商，擁有 10+ 年專業經驗，成功交付 200+ 優質工程項目，為高端酒店、會所、豪宅及名牌商舖提供專業裝修工程服務。</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary">免費報價諮詢
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -462,31 +231,17 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== Stats Band ===== -->
 <section class="stats-band">
   <div class="container">
     <div class="stats-band-inner">
-      <div class="stats-band-item">
-        <div class="num">80+</div>
-        <div class="label">公司團隊規模</div>
-      </div>
-      <div class="stats-band-item">
-        <div class="num">60+</div>
-        <div class="label">香港直屬員工</div>
-      </div>
-      <div class="stats-band-item">
-        <div class="num">20+</div>
-        <div class="label">項目管理人員</div>
-      </div>
-      <div class="stats-band-item">
-        <div class="num">100+</div>
-        <div class="label">內地廠房熟手技工</div>
-      </div>
+      <div class="stats-band-item"><div class="num">80+</div><div class="label">公司團隊規模</div></div>
+      <div class="stats-band-item"><div class="num">60+</div><div class="label">香港直屬員工</div></div>
+      <div class="stats-band-item"><div class="num">20+</div><div class="label">項目管理人員</div></div>
+      <div class="stats-band-item"><div class="num">100+</div><div class="label">內地廠房熟手技工</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== About ===== -->
 <section class="section about" id="about">
   <div class="container">
     <div class="section-header">
@@ -496,34 +251,24 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="about-grid">
       <div class="about-img">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="0.8">
-          <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 11h.01M15 11h.01"/>
-        </svg>
-        <div class="about-img-badge">香港黃大仙 · 新蒲崗</div>
+        <img src="images/about-lionrock.jpg" alt="IDECL 紮根香港 獅子山精神">
       </div>
       <div class="about-content">
         <h3>香港領先承建商<br>一站式工程解決方案</h3>
         <p>聯運裝修工程有限公司（Intermodal Decoration Engineering Company Limited）是香港一家領先的承建商，總部位於香港。集團在香港和中國各地均擁有專業施工團隊，具備多項裝修工程經驗。</p>
-        <p>我們專注提供大型專業裝修、櫥櫃、維修和保養，以及各類工程項目管理服務。以高效率、高品質和具有成本效益的方式進行專案施工管理，能夠為六星級款待業酒店、會所、豪宅和名牌商舖提供卓越服務。</p>
+        <p>我們專注提供大型專業裝修、櫥櫃、維修和保養，以及各類工程項目管理服務。以高效率、高品質和具有成本效益的方式進行專案施工管理，能夠為高端酒店、會所、豪宅和名牌商舖提供卓越服務。</p>
         <div class="about-founder">
           <p><strong>創辦人：</strong>林迎發先生 — 以企業價值為核心，帶領團隊成為業內專業的首選。</p>
         </div>
         <div class="about-values">
-          <div class="about-value">
-            <h5>價值 VALUE</h5>
-            <p>為客人創造更高價值，堅守誠信，信守承諾，贏取客戶信任。</p>
-          </div>
-          <div class="about-value">
-            <h5>使命 MISSION</h5>
-            <p>綜合力量，匯聚智慧，發揮團隊精神；發揮創意，開拓創新，提升服務水平。</p>
-          </div>
+          <div class="about-value"><h5>價值 VALUE</h5><p>為客人創造更高價值，堅守誠信，信守承諾，贏取客戶信任。</p></div>
+          <div class="about-value"><h5>使命 MISSION</h5><p>綜合力量，匯聚智慧，發揮團隊精神；發揮創意，開拓創新，提升服務水平。</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Advantages ===== -->
 <section class="section advantages" id="advantages">
   <div class="container">
     <div class="section-header">
@@ -566,7 +311,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== Services ===== -->
 <section class="section services" id="services">
   <div class="container">
     <div class="section-header">
@@ -609,7 +353,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== Factory ===== -->
 <section class="section factory" id="factory">
   <div class="container">
     <div class="section-header">
@@ -624,39 +367,23 @@ a{text-decoration:none;color:inherit}
         <p>廠房引進「裝配式裝修」技術，通過「先裝後嵌」手法，將複雜裝修工序轉移至較易控制的廠房進行預製，再送達工地裝嵌，有效減少天氣、勞動力及場地限制。</p>
         <p>廠內設有 1:1 比例模擬裝配陳列室，讓客戶近距離預視裝修成品，親身感受每個細節，並可按需求提出個性化定制。</p>
         <div class="factory-stats">
-          <div class="factory-stat">
-            <div class="num">20+</div>
-            <div class="label">年廠房專業經驗</div>
-          </div>
-          <div class="factory-stat">
-            <div class="num">550K</div>
-            <div class="label">平方呎廠房面積</div>
-          </div>
+          <div class="factory-stat"><div class="num">20+</div><div class="label">年廠房專業經驗</div></div>
+          <div class="factory-stat"><div class="num">550K</div><div class="label">平方呎廠房面積</div></div>
         </div>
         <div class="factory-tags">
-          <span class="factory-tag">東莞</span>
-          <span class="factory-tag">企石</span>
-          <span class="factory-tag">惠州</span>
-          <span class="factory-tag">木器</span>
-          <span class="factory-tag">人造石</span>
-          <span class="factory-tag">鐵器</span>
-          <span class="factory-tag">大理石</span>
-          <span class="factory-tag">油漆</span>
-          <span class="factory-tag">繪圖</span>
+          <span class="factory-tag">東莞</span><span class="factory-tag">企石</span><span class="factory-tag">惠州</span>
+          <span class="factory-tag">木器</span><span class="factory-tag">人造石</span><span class="factory-tag">鐵器</span>
+          <span class="factory-tag">大理石</span><span class="factory-tag">油漆</span><span class="factory-tag">繪圖</span>
           <span class="factory-tag">包裝運輸</span>
         </div>
       </div>
-      <div class="factory-visual">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="0.8">
-          <path d="M2 20h20M4 20V8l5-3v15M9 20V5l6-3v18M15 20V8l4-2v14"/>
-          <path d="M6 12h2M6 15h2M11 10h2M11 13h2M11 16h2M17 11h2M17 14h2"/>
-        </svg>
+      <div class="factory-images">
+        <div class="factory-img"><img src="images/factory-workshop.jpg" alt="IDECL 廠房工匠作業"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Projects ===== -->
 <section class="section projects" id="projects">
   <div class="container">
     <div class="section-header">
@@ -666,100 +393,61 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">款待 / 酒店</div>
-          <img src="images/regent-hotel.jpg" alt="香港麗晶酒店 Regent Hotel Hong Kong">
-        </div>
-        <div class="project-body">
-          <h4>香港麗晶酒店</h4>
-          <p>Regent Hotel Hong Kong — 六星級酒店裝修工程，締造頂級款待空間。</p>
-        </div>
+        <div class="project-img"><div class="project-category">款待 / 酒店</div><img src="images/regent-hotel.jpg" alt="香港麗晶酒店"></div>
+        <div class="project-body"><h4>香港麗晶酒店</h4><p>Regent Hotel Hong Kong — 高端酒店裝修工程，締造頂級款待空間。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">款待 / 酒店</div>
-          <img src="images/rosewood-hotel.jpg" alt="香港瑰麗酒店 Rosewood Hong Kong">
-        </div>
-        <div class="project-body">
-          <h4>香港瑰麗酒店</h4>
-          <p>Rosewood Hotel Hong Kong — 頂級奢華酒店室內裝修及廚櫃工程。</p>
-        </div>
+        <div class="project-img"><div class="project-category">款待 / 酒店</div><img src="images/rosewood-hotel.jpg" alt="香港瑰麗酒店"></div>
+        <div class="project-body"><h4>香港瑰麗酒店</h4><p>Rosewood Hotel Hong Kong — 頂級奢華酒店室內裝修及廚櫃工程。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">商場</div>
-          <img src="images/k11-musea.jpg" alt="K11 人文購物藝術館 K11 Musea">
-        </div>
-        <div class="project-body">
-          <h4>K11 人文購物藝術館</h4>
-          <p>K11 Musea — 高端商場裝修工程，融合藝術與零售的獨特空間。</p>
-        </div>
+        <div class="project-img"><div class="project-category">款待 / 酒店</div><img src="images/dorsett-hotel.jpg" alt="啟德帝盛酒店"></div>
+        <div class="project-body"><h4>啟德帝盛酒店</h4><p>Dorsett Kai Tak Hotel — 專業酒店裝修工程，品質與效率兼備。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">商場</div>
-          <img src="images/skycity.jpg" alt="機場航天城 SKYCITY 11 SKIES">
-        </div>
-        <div class="project-body">
-          <h4>機場航天城</h4>
-          <p>SKYCITY（11 SKIES）— 大型商業綜合體裝修工程，展現大型項目管理實力。</p>
-        </div>
+        <div class="project-img"><div class="project-category">商場</div><img src="images/k11-musea.jpg" alt="K11 人文購物藝術館"></div>
+        <div class="project-body"><h4>K11 人文購物藝術館</h4><p>K11 Musea — 高端商場裝修工程，融合藝術與零售的獨特空間。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">住宅</div>
-          <img src="images/victoria-harbour.jpg" alt="海璇 Victoria Harbour 住宅項目">
-        </div>
-        <div class="project-body">
-          <h4>海璇 Victoria Harbour</h4>
-          <p>與大型發展商合作的標誌性豪宅項目，提供高品質住宅裝修。</p>
-        </div>
+        <div class="project-img"><div class="project-category">商場</div><img src="images/harbour-north.jpg" alt="北角匯"></div>
+        <div class="project-body"><h4>北角匯</h4><p>Harbour North — 商場裝修翻新工程，提升購物體驗與空間品質。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">住宅</div>
-          <img src="images/mont-verra.jpg" alt="緹外 Mont Verra 山頂豪宅">
-        </div>
-        <div class="project-body">
-          <h4>緹外 Mont Verra</h4>
-          <p>山頂豪宅裝修項目，以精湛工藝打造高端居住空間。</p>
-        </div>
+        <div class="project-img"><div class="project-category">住宅</div><img src="images/victoria-harbour.jpg" alt="海璇 Victoria Harbour"></div>
+        <div class="project-body"><h4>海璇 Victoria Harbour</h4><p>與大型發展商合作的標誌性豪宅項目，提供高品質住宅裝修。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">會所</div>
-          <img src="images/jockey-club.jpg" alt="香港賽馬會跑馬地會所">
-        </div>
-        <div class="project-body">
-          <h4>香港賽馬會跑馬地會所</h4>
-          <p>Jockey Club Hong Kong Club House — 頂級會所裝修及翻新工程。</p>
-        </div>
+        <div class="project-img"><div class="project-category">住宅</div><img src="images/mont-verra.jpg" alt="緹外 Mont Verra"></div>
+        <div class="project-body"><h4>緹外 Mont Verra</h4><p>山頂豪宅裝修項目，以精湛工藝打造高端居住空間。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">商業大廈 / A&amp;A</div>
-          <img src="images/new-world-tower.jpg" alt="新世界大廈 New World Tower">
-        </div>
-        <div class="project-body">
-          <h4>新世界大廈</h4>
-          <p>New World Tower — 商業大廈改建及加建工程，合法合規交付。</p>
-        </div>
+        <div class="project-img"><div class="project-category">住宅</div><img src="images/pano-harbour.jpg" alt="澐璟 Pano Harbour"></div>
+        <div class="project-body"><h4>澐璟 Pano Harbour</h4><p>臨海豪宅裝修工程，精緻工藝配合無敵海景。</p></div>
       </div>
       <div class="project-card">
-        <div class="project-img">
-          <div class="project-category">示範單位</div>
-          <img src="images/the-southside.jpg" alt="港島南岸 The Southside 示範單位">
-        </div>
-        <div class="project-body">
-          <h4>港島南岸 The Southside</h4>
-          <p>精品示範單位裝修工程，精緻細節展現項目的高端定位。</p>
-        </div>
+        <div class="project-img"><div class="project-category">住宅</div><img src="images/the-pavilia-farm.jpg" alt="柏傲莊 The Pavilia Farm"></div>
+        <div class="project-body"><h4>柏傲莊 The Pavilia Farm</h4><p>大型住宅項目裝修工程，批量交付仍保持一貫高品質。</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"><div class="project-category">會所</div><img src="images/jockey-club.jpg" alt="香港賽馬會跑馬地會所"></div>
+        <div class="project-body"><h4>香港賽馬會跑馬地會所</h4><p>Jockey Club Hong Kong Club House — 頂級會所裝修及翻新工程。</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"><div class="project-category">會所</div><img src="images/century-gateway.jpg" alt="瓏門 Century Gateway"></div>
+        <div class="project-body"><h4>瓏門 Century Gateway</h4><p>豪宅會所裝修工程，以華麗設計打造尊享空間。</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"><div class="project-category">商業大廈 / A&amp;A</div><img src="images/new-world-tower.jpg" alt="新世界大廈"></div>
+        <div class="project-body"><h4>新世界大廈</h4><p>New World Tower — 商業大廈改建及加建工程，合法合規交付。</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"><div class="project-category">示範單位</div><img src="images/the-southside.jpg" alt="港島南岸 The Southside"></div>
+        <div class="project-body"><h4>港島南岸 The Southside</h4><p>精品示範單位裝修工程，精緻細節展現項目的高端定位。</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Quality & Safety ===== -->
 <section class="section quality" id="quality">
   <div class="container">
     <div class="section-header">
@@ -769,10 +457,7 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="quality-grid">
       <div class="quality-card">
-        <h4>
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          品質保障
-        </h4>
+        <h4><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>品質保障</h4>
         <ul class="quality-list">
           <li><strong>獨立 QA/QC 團隊</strong> — 直接直屬公司管理層，確保所有施工及材料符合標準、規格和設計圖。</li>
           <li><strong>場內外品質檢查</strong> — 對場外預製產品和現場工作均進行嚴格品質保證與控制。</li>
@@ -782,10 +467,7 @@ a{text-decoration:none;color:inherit}
         </ul>
       </div>
       <div class="quality-card">
-        <h4>
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          安全保障
-        </h4>
+        <h4><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>安全保障</h4>
         <ul class="quality-list">
           <li><strong>安全健康環保優先</strong> — 時刻將安全、健康和環保置於首位，致力維護最高標準工作場所。</li>
           <li><strong>充足資源投入</strong> — 提供充足資源實施安全政策，並在各級推廣及培訓。</li>
@@ -798,7 +480,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
 <section class="cta">
   <div class="container">
     <div class="cta-inner">
@@ -811,7 +492,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== Contact ===== -->
 <section class="section contact" id="contact">
   <div class="container">
     <div class="section-header">
@@ -827,50 +507,28 @@ a{text-decoration:none;color:inherit}
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
           <div class="contact-item-text">
             <h5>公司地址</h5>
-            <p>香港黃大仙區新蒲崗六合街23號<br>萬昌中心1706室<br><span style="font-size:12px">Room 1706, Max Trade Centre, 23 Luk Hop Street, Wong Tai Sin, Hong Kong</span></p>
+            <p>香港新蒲崗六合街23號<br>萬昌中心1706室<br><span style="font-size:12px">Room 1706, Max Trade Centre, 23 Luk Hop Street, San Po Kong, Hong Kong</span></p>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-          <div class="contact-item-text">
-            <h5>電郵</h5>
-            <p><a href="mailto:info@idecl.hk">info@idecl.hk</a></p>
-          </div>
+          <div class="contact-item-text"><h5>電郵</h5><p><a href="mailto:info@idecl.hk">info@idecl.hk</a></p></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-          <div class="contact-item-text">
-            <h5>查詢熱線</h5>
-            <p><a href="tel:+85263590123">6359 0123</a></p>
-          </div>
+          <div class="contact-item-text"><h5>查詢熱線</h5><p><a href="tel:+85263590123">6359 0123</a></p></div>
         </div>
       </div>
       <div class="contact-form">
         <form id="contactForm">
           <div class="form-row">
-            <div class="form-group">
-              <label for="name">姓名 *</label>
-              <input type="text" id="name" name="name" required placeholder="你的姓名">
-            </div>
-            <div class="form-group">
-              <label for="phone">聯絡電話 *</label>
-              <input type="tel" id="phone" name="phone" required placeholder="你的電話">
-            </div>
+            <div class="form-group"><label for="name">姓名 *</label><input type="text" id="name" name="name" required placeholder="你的姓名"></div>
+            <div class="form-group"><label for="phone">聯絡電話 *</label><input type="tel" id="phone" name="phone" required placeholder="你的電話"></div>
           </div>
-          <div class="form-group">
-            <label for="email">電郵</label>
-            <input type="email" id="email" name="email" placeholder="你的電郵">
-          </div>
-          <div class="form-group">
-            <label for="subject">工程類型</label>
-            <input type="text" id="subject" name="subject" placeholder="例如：酒店裝修、住宅裝修、樓宇維修...">
-          </div>
-          <div class="form-group">
-            <label for="message">查詢內容 *</label>
-            <textarea id="message" name="message" required placeholder="請簡述你的工程需求..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit">
-            提交查詢
+          <div class="form-group"><label for="email">電郵</label><input type="email" id="email" name="email" placeholder="你的電郵"></div>
+          <div class="form-group"><label for="subject">工程類型</label><input type="text" id="subject" name="subject" placeholder="例如：酒店裝修、住宅裝修、樓宇維修..."></div>
+          <div class="form-group"><label for="message">查詢內容 *</label><textarea id="message" name="message" required placeholder="請簡述你的工程需求..."></textarea></div>
+          <button type="submit" class="btn btn-primary form-submit">提交查詢
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           </button>
         </form>
@@ -879,14 +537,11 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <img src="images/logo-white.png" alt="IDECL 聯運裝修工程有限公司">
-        </div>
+        <div class="logo"><img src="images/logo-white.png" alt="IDECL 聯運裝修工程有限公司"></div>
         <p>聯運裝修工程有限公司 Intermodal Decoration Engineering Company Limited — 香港領先承建商，為客戶提供一站式室內裝修及工程服務。</p>
       </div>
       <div>
@@ -918,24 +573,17 @@ a{text-decoration:none;color:inherit}
   </div>
 </footer>
 
-<!-- Toast -->
 <div class="toast" id="toast">查詢已提交，我們會盡快與你聯絡！</div>
 
 <script>
-// Mobile nav toggle
 const navToggle=document.getElementById('navToggle');
 const navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',()=>{navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-
-// Nav scroll effect
 window.addEventListener('scroll',()=>{
   const nav=document.querySelector('.nav');
-  if(window.scrollY>50){nav.style.boxShadow='0 4px 20px rgba(0,0,0,0.15)'}
-  else{nav.style.boxShadow='none'}
+  if(window.scrollY>50){nav.style.boxShadow='0 4px 20px rgba(0,0,0,0.15)'}else{nav.style.boxShadow='none'}
 });
-
-// Contact form
 const form=document.getElementById('contactForm');
 const toast=document.getElementById('toast');
 form.addEventListener('submit',(e)=>{
@@ -943,29 +591,17 @@ form.addEventListener('submit',(e)=>{
   const name=document.getElementById('name').value;
   const phone=document.getElementById('phone').value;
   const message=document.getElementById('message').value;
-  // Open mail client with pre-filled content
   const subject=encodeURIComponent('網站查詢 - '+name);
-  const body=encodeURIComponent(
-    '姓名：'+name+'\n'+
-    '電話：'+phone+'\n'+
-    '電郵：'+document.getElementById('email').value+'\n'+
-    '工程類型：'+document.getElementById('subject').value+'\n\n'+
-    '查詢內容：\n'+message
-  );
+  const body=encodeURIComponent('姓名：'+name+'\n'+'電話：'+phone+'\n'+'電郵：'+document.getElementById('email').value+'\n'+'工程類型：'+document.getElementById('subject').value+'\n\n'+'查詢內容：\n'+message);
   window.location.href='mailto:info@idecl.hk?subject='+subject+'&body='+body;
   toast.classList.add('show');
   setTimeout(()=>toast.classList.remove('show'),4000);
   form.reset();
 });
-
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
   anchor.addEventListener('click',function(e){
     const target=document.querySelector(this.getAttribute('href'));
-    if(target){
-      e.preventDefault();
-      target.scrollIntoView({behavior:'smooth',block:'start'});
-    }
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
   });
 });
 </script>
