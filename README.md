@@ -1,4 +1,4 @@
-# IDEC 公司網站
+# IDECL 公司網站
 
 Intermodal Decoration Engineering Company Limited 官方網站，純靜態 HTML，可直接部署到 GitHub Pages。
 
